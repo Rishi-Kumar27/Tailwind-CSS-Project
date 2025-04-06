@@ -1,9 +1,9 @@
-#🌿 Plant Website - Tailwind CSS Landing Page
+# Plant Website - Tailwind CSS Landing Page 🌿
 This is a modern, responsive plant shop landing page built using HTML and Tailwind CSS. It showcases a clean, minimal design ideal for plant stores or eco-themed businesses.
 
-#🔗 Live Demo: View Website
+# 🔗 Live Demo: View Website
 
-#🚀 Features
+# 🚀 Features
 
 📱 Fully responsive design
 
@@ -17,7 +17,7 @@ This is a modern, responsive plant shop landing page built using HTML and Tailwi
 
 💡 Lightweight and fast-loading
 
-#📁 Tech Stack
+# 📁 Tech Stack
 
 1.HTML5
 2.Tailwind CSS
