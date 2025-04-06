@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <title>Plant Website || TailwindCSS </title>
+    <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="output.css">
+</head>
+<body >
+    
+    <!-- Header Section -->
+     
+    <header id="navbar" class=" bg-green-950 fixed w-full top-0 left-0 z-50">
+        <nav class="container flex justify-between items-center h-16 sm:h-20">
+            <div class="font-Lobster sm:text-2xl "><i>IndorePlants.</i></div>
+
+            <div id="nav-menu" class="absolute top-0 left-[-100%] w-full min-h-[80vh]  bg-green-950/80 backdrop-blur-sm  flex items-center justify-center duration-300 overflow-hidden lg:static lg:min-h-fit lg:bg-transparent lg:w-auto">
+                <ul class="flex flex-col items-center gap-8 lg:flex-row">
+                    <li><a class="nav-link active" href="#home">Home</a></li>
+                    <li><a class="nav-link" href="#about">About </a></li>
+                    <li><a class="nav-link" href="#popular">Popular</a></li>
+                    <li><a class="nav-link " href="#review">Review</a></li>
+                </ul>
+                <div class="absolute bottom-0 -right-10 opacity-90 lg:hidden">
+                    <img src="./assets/images/leaf-1.png" class="w-32" alt="">
+                </div>
+                <div class="absolute -top-5 -left-5 rotate-90 opacity-90 lg:hidden">
+                    <img src="./assets/images/leaf-2.png" class="w-32" alt="">
+                </div>
+            </div>
+                 <div class="text-xl sm:text-2xl cursor-pointer z-50  lg:hidden">
+                    <i class="fa-solid fa-bars" id="hamburger"></i>
+                 </div>
+        </nav>
+    </header>
+
+    <!-- ~~~~~~~~~~~~~~~ Hero Section ~~~~~~~~~~~~~~~ -->
+
+    <section id="home" class="relative ">
+        <div class="container">
+            <!-- blob 1 -->
+             <div class=" w-64 h-64 bg-green-700 rounded-full blur-3xl -z-10 opacity-40 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+             </div>
+             <!-- blob 2 -->
+             <div class=" w-64 h-64 bg-green-700 rounded-full blur-3xl -z-10 opacity-40 absolute right-0 bottom-0 ">
+            </div>
+           
+            <div class="flex flex-col items-center gap-5 lg:flex-row">
+                <!-- Content -->
+                <div class="home__data w-full space-y-5 lg:w-1/2">
+                    <h1>
+                        <span class="text-yellow-500">Plants</span> make a <br>
+                        positive 
+                    <span class="text-yellow-500">impact</span> on <br>
+                        your environment   
+                    </h1>
+
+                    <p class="text-slate-300 font-Lobster">Plants are the silent healers—bringing peace, beauty, and fresh air into every corner of life.
+                        Plants don't speak, but they heal in ways words never could. Whether it’s a small succulent on your desk or a leafy Monstera.
+                    </p>
+
+                    <div class="flex flex-col gap-2 sm:flex-row md:gap-4 lg:pt-5 xl:pt-10">
+                        <button class="btn">
+                            <span>Shop Now</span>
+                        <i class="fa-solid fa-leaf"></i>
+                        </button>
+                        <button class="btn btn_outline">
+                            <span>Know More</span>
+                            <i class="fa-solid fa-leaf"></i>                            
+                        </button>
+                    </div>
+                    <p class="text-xs font-Lobster text-slate-300">You will get 30-days free trial.</p>
+                    <div class="flex items-center gap-5 text-lg lg:pt-5">
+                        <i class="fa-brands fa-facebook-f text-slate-300  hover:text-yellow-500 duration-300 cursor-pointer"></i>
+                        <i class="fa-brands fa-twitter text-slate-300 hover:text-yellow-500 duration-300 cursor-pointer text-base "></i>
+                        <i class="fa-brands fa-instagram text-slate-300   hover:text-yellow-500 duration-300 cursor-pointer "></i>
+                        <i class="fa-brands fa-linkedin-in text-slate-300  hover:text-yellow-500 duration-300 cursor-pointer "></i>
+                    </div>
+                </div>
+
+                <!---Image --->
+                <div class="w-full relative lg:w-1/2 ">
+                    <img src="./assets/images/home.png" alt="" class="home__image">
+
+                    <!-- Leaf -->
+                     <div class="absolute -top-10 right-0 opacity-30 xl:top-5 animate-movingY">
+                        <i class="fa-solid fa-leaf text-6xl text-yellow-500"></i>  
+                     </div>
+
+                    <!-- Flower -->
+                    <div class="absolute bottom-0 left-0 opacity-30 xl:bottom-14 animate-rotating">
+                        <i class="fa-solid fa-fan text-6xl text-yellow-500"></i>
+                     </div>
+                    <!-- Plant -->
+                    <div class="hidden absolute -top-8 -left-5 opacity-30 lg:block animate-scalingUp">
+                        <i class="fa-solid fa-seedling text-6xl text-yellow-500"></i>  
+                     </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    
+    <!-- ~~~~~~~~~~~~~~~ Service Section ~~~~~~~~~~~~~~~ -->
+
+    <div class="bg-white text-green-900 py-20">
+        <div class="container w-full grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 ">
+            <!-- Card-1 -->
+             <div class="service_card border border-green-900 p-5 cursor-pointer rounded-md hover:shadow-2xl hover:translate-y-1 duration-300 space-y-5">
+                <div class="flex items-center gap-5">
+                    <i class="fa-solid fa-truck-fast  text-3xl md:text-4xl xl:text-5xl"></i>
+                    <p class="md:text-lg font-bold">
+                        Fast <br>
+                        Delivery
+                    </p>
+                </div>
+                <p class="font-Lobster ">
+                    We know how exciting it is to welcome a new plant into your space—and we don’t believe in making you wait.
+                </p>
+             </div>
+            
+
+              <!-- Card-2 -->
+              <div class="service_card border border-green-900 p-5 cursor-pointer rounded-md hover:shadow-2xl hover:translate-y-1 duration-300 space-y-5">
+                <div class="flex items-center gap-5">
+                    <i class="fa-solid fa-headphones  text-3xl md:text-4xl xl:text-5xl"></i>
+                    <p class="md:text-lg font-bold">
+                        Great Customer <br>
+                        Service
+                    </p>
+                </div>
+                <p class="font-Lobster ">
+                    At our store, we believe plants deserve love—and so do you! Our dedicated support team.
+                </p>
+             </div>
+
+              <!-- Card-3 -->
+              <div class="service_card border border-green-900 p-5 cursor-pointer rounded-md hover:shadow-2xl hover:translate-y-1 duration-300 space-y-5">
+                <div class="flex items-center gap-5">
+                    <i class="fa-solid fa-seedling  text-3xl md:text-4xl xl:text-5xl"></i>
+                    <p class="md:text-lg font-bold">
+                        Original <br>
+                        Plants
+                    </p>
+                </div>
+                <p class="font-Lobster ">
+                    Every plant we deliver is 100% original, naturally grown, and handpicked with care. 
+                </p>
+             </div>
+
+              <!-- Card-4 -->
+              <div class="service_card border border-green-900 p-5 cursor-pointer rounded-md hover:shadow-2xl hover:translate-y-1 duration-300 space-y-5">
+                <div class="flex items-center gap-5">
+                    <i class="fa-solid fa-dollar-sign  text-3xl md:text-4xl xl:text-5xl"></i>
+                    <p class="md:text-lg font-bold">
+                        Affordable <br>
+                        Price
+                    </p>
+                </div>
+                <p class="font-Lobster ">
+                    Bringing nature into your home shouldn’t break the bank—and with us, it won’t! We offer a wide range of healthy.
+                </p>
+             </div>
+
+
+        </div>
+    </div>
+
+    <!-- ~~~~~~~~~~~~~~~ About Us Section ~~~~~~~~~~~~~~~ -->
+
+    <section id="about" class="relative overflow-hidden ">
+        <div class="about_leaf absolute -top-8 -right-12 opacity-50"> 
+            <img src="./assets/images/leaf-3.png" alt="" class="w-40 md:w-52 xl:w-64 ">
+        </div>
+
+
+        <div class="about_top flex flex-col items-center gap-3 text-center mb-10 md:mb-20 ">
+            <h2 class="title ">About Us</h2>
+            <p class="max-w-2xl">Follow instruction for more</p>
+        </div>
+
+        <div class="container space-y-10 xl:space-y-0">
+            <!-- Item-1 -->
+             <div class="flex flex-col items-center lg:flex-row gap-5">
+                <!-- Image -->
+                 <div class="about_item_1-img w-full lg:w-1/2">
+                    <img src="./assets/images/plant-1.png" alt="" class="w-full sm:w-2/3 lg:w-full xl:w-2/3 mx-auto">
+                 </div>
+
+                 <!-- content -->
+                  <div class="about_item_1-content w-full lg:w-1/2">
+                    <div class="space-y-5">
+                        <h3>
+                            Make your <span class="text-yellow-500">organic</span><br>
+                            garden
+                        </h3>
+                        <p class="text-slate-300 font-Lobster">
+                            Dreaming of a lush, chemical-free garden? Start your own organic paradise with our handpicked collection of natural, pesticide-free plants. From fresh herbs and veggies to blooming flowers and leafy greens, we’ve got everything you need to build a garden that’s as healthy as it is beautiful.
+                        </p>
+                    </div>
+                  </div>
+             </div>
+
+             <!-- Item-2 -->
+             <div class="flex flex-col items-center lg:flex-row-reverse gap-5">
+                <!-- Image -->
+                 <div class="about_item_2-img w-full lg:w-1/2">
+                    <img src="./assets/images/plant-2.png" alt="" class="w-full sm:w-2/3 lg:w-full xl:w-2/3 mx-auto">
+                 </div>
+
+                 <!-- content -->
+                  <div class="about_item_2-content w-full lg:w-1/2">
+                    <div class="space-y-5">
+                        <h3>
+                            Come with us <br>
+                            <span class="text-yellow-500">grow up</span> 
+                            your plant
+                        </h3>
+                        <p class="text-slate-300 font-Lobster">
+                            We’re not just selling plants—we’re building a green community. Whether you're a first-time plant parent or a seasoned gardener, we're here to grow with you. From choosing the right plant to learning how to care for it, we’ll be with you every step of the way.Join us on a journey of growth, joy, and green living. With every leaf that unfurls and every root that strengthens.
+                        </p>
+                    </div>
+                  </div>
+             </div>
+
+        </div>
+    </section>
+
+    <!-- ~~~~~~~~~~~~~~~ Popular Section ~~~~~~~~~~~~~~~ -->
+
+    <section id="popular" class="bg-green-900">
+        <div class="popular_top flex flex-col items-center gap-3 text-center mb-40 ">
+            <h2 class="title ">Your Choice Plant</h2>
+            <p class="max-w-2xl">Follow instruction for more</p>
+        </div>
+
+        <div class="container w-full grid grid-cols-1 gap-x-8 gap-y-36 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            <!-- Card-1 -->
+             <div class="popular_card bg-green-950 p-10 pt-24 rounded-md relative ">
+                <img src="./assets/images/cart-1.png" alt="" class="w-56 absolute -top-5 left-1/2 transform -translate-x-1/2 -translate-y-1/2 duration-500">
+                <p class="italic">Nephrolepis exaltata</p>
+                <h3>Boston Fern</h3>
+
+                <div class="text-yellow-500 text-xs py-3 ">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <i class="fa-regular fa-star text-gray-400"></i>
+                    <i class="fa-regular fa-star text-gray-400"></i>
+                </div>
+
+                <div class="flex items-center justify-between">
+                    <p class="text-xl ">$5</p>
+                    <button class="bg-yellow-500 px-2 py-1 rounded-sm text-xl">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </button>
+                </div>
+             </div>
+
+              <!-- Card-2 -->
+              <div class="popular_card bg-green-950 p-10 pt-24 rounded-md relative ">
+                <img src="./assets/images/cart-2.png" alt="" class="w-56 absolute -top-5 left-1/2 transform -translate-x-1/2 -translate-y-1/2 duration-500">
+                <p class="italic">Ficus elastica</p>
+                <h3>Rubber Plant</h3>
+
+                <div class="text-yellow-500 text-xs py-3 ">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <i class="fa-regular fa-star text-gray-400"></i>
+                    <i class="fa-regular fa-star text-gray-400"></i>
+                </div>
+
+                <div class="flex items-center justify-between">
+                    <p class="text-xl ">$8</p>
+                    <button class="bg-yellow-500 px-2 py-1 rounded-sm text-xl">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </button>
+                </div>
+             </div>
+
+              <!-- Card-3 -->
+              <div class="popular_card bg-green-950 p-10 pt-24 rounded-md relative ">
+                <img src="./assets/images/cart-3.png" alt="" class="w-56 absolute -top-5 left-1/2 transform -translate-x-1/2 -translate-y-1/2 duration-500">
+                <p class="italic">Spathiphyllum wallisii</p>
+                <h3>Peace Lily</h3>
+
+                <div class="text-yellow-500 text-xs py-3 ">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <i class="fa-regular fa-star text-gray-400"></i>
+                    <i class="fa-regular fa-star text-gray-400"></i>
+                </div>
+
+                <div class="flex items-center justify-between">
+                    <p class="text-xl ">$10</p>
+                    <button class="bg-yellow-500 px-2 py-1 rounded-sm text-xl">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </button>
+                </div>
+             </div>
+
+              <!-- Card-4 -->
+              <div class="popular_card bg-green-950 p-10 pt-24 rounded-md relative ">
+                <img src="./assets/images/cart-4.png" alt="" class="w-56 absolute -top-5 left-1/2 transform -translate-x-1/2 -translate-y-1/2 duration-500">
+                <p class="italic">Adenium obesum</p>
+                <h3>Desert Rose</h3>
+
+                <div class="text-yellow-500 text-xs py-3 ">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <i class="fa-regular fa-star text-gray-400"></i>
+                    <i class="fa-regular fa-star text-gray-400"></i>
+                </div>
+
+                <div class="flex items-center justify-between">
+                    <p class="text-xl ">$12</p>
+                    <button class="bg-yellow-500 px-2 py-1 rounded-sm text-xl">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </button>
+                </div>
+             </div>
+        </div>
+    </section>
+    
+    <!-- ~~~~~~~~~~~~~~~ Review Section ~~~~~~~~~~~~~~~ -->
+    
+    <section id="review" class="relative mb-20 md:mb-28 overflow-hidden ">
+        
+        <div class="review_leaf absolute -top-8 -left-12 opacity-50">
+            <img src="./assets/images/leaf-4.png" alt="" class="w-40 md:w-52 xl:w-64"> 
+        </div>
+
+        <div class="review_top flex flex-col items-center gap-3 text-center mb-10 md:mb-20 ">
+            <h2 class="title ">Customer Review</h2>
+            <p class="max-w-2xl">Follow instruction for more</p>
+        </div>
+
+        <div class="review_swiper container ">
+            <div class="py-12 swiper">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
+                        <div class="flex flex-col gap-5 bg-green-900 rounded-md p-6">
+                            <p class="font-Lobster">"I was amazed by the quality of the plants! They arrived fresh, healthy, and beautifully packed. Customer service was super friendly too."</p>
+                            <div class="flex items-center ">
+                                <img src="./assets/images/review-1.jpg" alt="" class="w-12 h-12 rounded-full ">
+                                <div class="ml-2 ">
+                                    <p class="text-yellow-500 uppercase ">Priya</p>
+                                    <p>Writer</p>
+                                </div>
+                                <i class="fa-solid fa-quote-right text-4xl ml-auto "></i>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li class="swiper-slide">
+                        <div class="flex flex-col gap-5 bg-green-900 rounded-md p-6">
+                            <p class="font-Lobster">"Fast delivery, great prices, and my snake plant looks perfect in my living room. Loved the experience from start to finish!"</p>
+                            <div class="flex items-center ">
+                                <img src="./assets/images/review-2.jpg" alt="" class="w-12 h-12 rounded-full ">
+                                <div class="ml-2 ">
+                                    <p class="text-yellow-500 uppercase ">Rahul</p>
+                                    <p>Designer</p>
+                                </div>
+                                <i class="fa-solid fa-quote-right text-4xl ml-auto "></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="swiper-slide">
+                        <div class="flex flex-col gap-5 bg-green-900 rounded-md p-6">
+                            <p class="font-Lobster">"I'm new to plants, but their support team helped me choose the right one. It’s been a week and my peace lily is thriving. Thank you!"</p>
+                            <div class="flex items-center ">
+                                <img src="./assets/images/review-3.jpg" alt="" class="w-12 h-12 rounded-full ">
+                                <div class="ml-2 ">
+                                    <p class="text-yellow-500 uppercase ">Ananya</p>
+                                    <p>Teacher</p>
+                                </div>
+                                <i class="fa-solid fa-quote-right text-4xl ml-auto "></i>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="swiper-slide">
+                        <div class="flex flex-col gap-5 bg-green-900 rounded-md p-6">
+                            <p class="font-Lobster">"The packaging was secure and eco-friendly, and the plant came with simple care instructions. Super happy with my order!"</p>
+                            <div class="flex items-center ">
+                                <img src="./assets/images/review-4.jpg" alt="" class="w-12 h-12 rounded-full ">
+                                <div class="ml-2 ">
+                                    <p class="text-yellow-500 uppercase ">Neha</p>
+                                    <p>Artist</p>
+                                </div>
+                                <i class="fa-solid fa-quote-right text-4xl ml-auto "></i>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ~~~~~~~~~~~~~~~ Footer Section ~~~~~~~~~~~~~~~ -->
+
+    <footer id="footer" class="bg-yellow-100 text-green-950 pt-20 pb-10 md:pt-28 relative ">
+        <!-- newsletter -->
+        <div class="container text-white absolute top-0 right-0 left-0 -translate-y-1/2 ">
+            <div class="bg-green-900 px-10 pt-5 pb-10 space-y-5 rounded-md ">
+                <h3>
+                    <span class="text-yellow-500">Subscribe</span> to our newsletter
+                </h3>
+
+                <div class="flex flex-col md:flex-row gap-1">
+                    <input type="email" placeholder="Your Email Address" class="w-full px-5 py-3 text-green-900 rounded-md outline-none ">
+                    <button class="flex items-center justify-center gap-1 bg-green-950 px-5 py-3 rounded-md hover:opacity-80 duration-300 ">
+                        <span>Subscribe</span>
+                        <i class="fa-solid fa-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer_icon container mt-16 mb-10">
+            <div class="border-b bg-green-500 relative ">
+                <div class="absolute top-0 transform -translate-y-1/2 left-0 right-0 max-w-36 mx-auto ">
+                    <div class="bg-yellow-100 text-lg text-center space-x-2 ">
+                        <i class="fa-brands fa-facebook-f hover:text-yellow-500 duration-300 cursor-pointer"></i>
+                        <i class="fa-brands fa-twitter hover:text-yellow-500 duration-300 cursor-pointer text-base"></i>
+                        <i class="fa-brands fa-instagram hover:text-yellow-500 duration-300 cursor-pointer"></i>
+                        <i class="fa-brands fa-linkedin-in hover:text-yellow-500 duration-300 cursor-pointer"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer_content container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 text-center md:text-start ">
+           <!-- Item-1 -->
+            <div>
+                <div class="text-7xl text-green-700 text-center inline-block">
+                    <i class="fa-solid fa-leaf"></i>
+                    <p class="font-Lobster text-xl sm:text-2xl ">IndorePlants.</p>
+                </div>
+            </div>
+
+            <!-- Item-2 -->
+             <div >
+                <p class="mb-5 font-bold text-xl ">Quick Link</p>
+
+                <div class="flex flex-col gap-1 ">
+                    <a href="#">Plants</a>
+                    <a href="#">Flowers</a>
+                    <a href="#">Gerdening</a>
+                    <a href="#">Seeds</a>
+                    <a href="#">Shipping</a>
+                </div>
+             </div>
+
+             <!-- Item-3 -->
+             <div >
+                <p class="mb-5 font-bold text-xl ">Popular Services</p>
+
+                <div class="flex flex-col gap-1 ">
+                    <a href="#">Tree Planting</a>
+                    <a href="#">Grass Cutting</a>
+                    <a href="#">Weeds Control</a>
+                    <a href="#">Project</a>
+                </div>
+             </div>
+
+              <!-- Item-4 -->
+              <div >
+                <p class="mb-5 font-bold text-xl ">Contact Us</p>
+
+                <div class="flex flex-col gap-1 ">
+                    <a href="#">+89 233 78 923</a>
+                    <a href="#">rishicode@gmail.com</a>
+                    <br>
+                    <p>1234 Tailwind Ave, CSS City, Webland 56789, USA</p>
+                </div>
+             </div>
+        </div>
+
+        <div class="copy_right container ">
+            <p class="text-center mt-10 opacity-50 ">Copyright &copy; 2024 RishiCode. All rights reserved.</p>
+        </div>
+
+        <div class="footer_floral absolute bottom-0 left-0 opacity-20 pointer-events-none ">
+            <img src="./assets/images/floral-1.png" alt="" class="w-full lg:w-1/2 ">
+        </div>
+
+    </footer>
+
+    <a href="#" class="fixed right-4 -bottom-1/2 bg-yellow-500 shadow-sm inline-block px-3 py-1 md:px-4 md:py-2 rounded-md text-lg z-50 hover:-translate-y-1 duration-300 " id="scroll-up">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="./images/js/scrollreveal.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
